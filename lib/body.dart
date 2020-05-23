@@ -27,6 +27,6 @@ class _BodyState extends State<Body>{
         textScaleFactor: 1.5),
       duration: new Duration(seconds: 5),
         );
-    Scaffold.of(context).showSnackBar(snackBar )
+    Scaffold.of(context).showSnackBar(snackBar );
   }
 }

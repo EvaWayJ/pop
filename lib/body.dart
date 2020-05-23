@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pop/Nouvele_page.dart';
 
 class Body extends StatefulWidget{
   @override
@@ -9,14 +10,15 @@ class _BodyState extends State<Body>{
   @override
   Widget build(BuildContext context) {
     return new Center(
-      child: RaisedButton(onPressed: (() => dialogue('Bienvenue a nice', 'Admirer le vieux nice la promenade des anglais et ces quartier')),
+      child: RaisedButton(
         child: new Text(
             "Appuyer moi",
             style: new TextStyle(
                 fontStyle: FontStyle.italic,
                 fontSize: 20.0
             )
-        ),)
+        ),
+      onPressed: versNouvellePage,)
       ,
     );
   }
@@ -64,7 +66,7 @@ class _BodyState extends State<Body>{
             contentPadding: EdgeInsets.all(10.0),
             children: <Widget>[
               new Text(desc),
-              new Container(height: 20.0)
+              new Container(height: 20.0),
               new RaisedButton(
                   color: Colors.teal,
                   textColor: Colors.white,
@@ -77,5 +79,12 @@ class _BodyState extends State<Body>{
           );
         }
     );
+  }
+
+  void versNouvellePage(){
+    Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context){
+      return new NouvellePage('La seconde page');
+    }
+    ));
   }
 }

@@ -9,7 +9,7 @@ class _BodyState extends State<Body>{
   @override
   Widget build(BuildContext context) {
     return new Center(
-      child: RaisedButton(onPressed: pressed(),
+      child: RaisedButton(onPressed: pressed,
       child: new Text(
         "Appuyer moi",
             style: new TextStyle(
@@ -22,7 +22,7 @@ class _BodyState extends State<Body>{
   }
   void pressed(){
     setState(() {
-      print("object")
+      print("object");
     });
   }
 }
